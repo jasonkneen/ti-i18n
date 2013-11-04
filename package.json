@@ -1,0 +1,61 @@
+{
+  "about": {
+    "name": "Titanium i18n CLI",
+    "author": "Fokke Zandbergen",
+    "copyright": "Copyright (c) 2013, Fokke Zandbergen.  All Rights Reserved.",
+    "id": "nl.fokkezb.tii18n"
+  },
+  "name": "ti-i18n",
+  "description": "CLI to manage internationalizing your Titanium app",
+  "keywords": [
+    "appcelerator",
+    "titanium",
+    "mobile",
+    "ios",
+    "iphone",
+    "android",
+    "alloy",
+    "cli",
+    "i18n",
+    "internationalization"
+  ],
+  "version": "0.0.1",
+  "author": {
+    "name": "Fokke Zandbergen",
+    "email": "mail@fokkezb.nl"
+  },
+  "maintainers": [{
+    "name": "Fokke Zandbergen",
+    "email": "mail@fokkezb.nl"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fokkezb/ti-i18n.git"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "colors": ">=0.6.0-1",
+    "pkginfo": ">=0.2.2",
+    "underscore": ">=1.5.2",
+    "fields": ">=0.1.11",
+    "exec": ">=0.0.6",
+    "commander": ">=1.0.x",
+    "wrench": ">=1.3.9",
+    "xmldom": "0.1.13"
+  },
+  "license": "Apache Public License v2",
+  "bin": "./cli.js",
+  "main": "./cli.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "homepage": "http://fokkezb.nl/tag/ti-i18n",
+  "readme": "",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/fokkezb/ti-i18n/issues"
+  }
+}
