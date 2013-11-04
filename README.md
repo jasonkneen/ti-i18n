@@ -53,17 +53,6 @@ Option | Availability | Description
 `-h`, `--help`|both|output usage information
 `-v`, `--version`|stand-alone|output the version number (as a hook, this will output the Titanium CLI version)
 
-### System arguments
-Some arguments have to do with how TiNy works:
-
-Argument(s) | Description
------------ | -----------
-`v`, `version`, `-v` | Prints TiNy version. Must be first argument.
-`recipes` | Prints system and user(overridden) recipes. Must be first argument.
-`verbose` | Shows how recipes are expanded, shows the resulting command and asks if you want to execute it, save it as recipe or just exit.
-`[my-recipe]:` | Sets or unsets an recipe. See [Recipes](#recipes).
-`[new-recipe]:[old-recipe]` | Renames a recipe. See [Recipes](#recipes).
-
 ## Roadmap
 
 * Rewrite `extract` to search through `XML`, `TSS` (JSON) and `JS` (AST).
