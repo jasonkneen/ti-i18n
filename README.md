@@ -32,7 +32,7 @@ ti i18n extract
 *ti-i18n* will be further developped to be a worthy hook, listen to the global flags like `--no-colors` and read any relevant defaults from the CLI config.
 
 ### Extract
-As demonstrated by the test on the files in [test/source](https://github.com/FokkeZB/ti-i18n/tree/master/test/source), *ti-i18n* is able to extract any string id. Just don't use composed strings like `L('error_' + code);`.
+As demonstrated by the test on the files in [test/source](https://github.com/FokkeZB/ti-i18n/tree/master/test/source), *ti-i18n* is able to extract i18n strings from XML, TSS and JS source code. Just don't use composed strings like `L('error_' + code);`.
 
 By default *ti-i18n* scans the `i18n` directory for languages and reads and writes to all of them. You can choose a specific language by passing it as the first argument after the `extract` command.
 
