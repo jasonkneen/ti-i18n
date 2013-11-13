@@ -58,8 +58,10 @@ ti-i18n sync -a
 ## Usage
 Command | Availability | Option | Description
 ------- | ------------ | ------ | -----------
-`extract`|both||extract i18n strings from the source code (js and tss files)
+`extract`|both||extract i18n strings from the source code
 ||`<language>`|Single lanuage to extract for
+||`-a`, `--apply`|Update `strings.xml`
+`sync`|both||sync strings between languages
 ||`-a`, `--apply`|Update `strings.xml`
 `hook`|stand-alone|hook ti-i18n into Titanium CLI as: `ti i18n`
 `unhook`|both|unhook ti-i18n from Titanium CLI
