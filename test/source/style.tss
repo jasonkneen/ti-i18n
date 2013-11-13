@@ -1,0 +1,17 @@
+".basic": {
+	titleid: 'aa',
+    textid: 'ab',
+    messageid: 'ac',
+    titlepromptid: 'ad',
+    subtitleid: 'ae',
+    hinttextid: 'af',
+    promptid: 'ag'
+}
+
+".advanced": {
+    titleid: {},
+
+    one: L('ba', 'bah'),
+    two: Ti.Locale.getString('bb', 'bbh'),
+    three: Titanium.Locale.getString('bc', 'bch')
+}

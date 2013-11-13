@@ -1,0 +1,6 @@
+<Alloy>
+	<View titleid="aa" textid="ab" messageid="ac" titlepromptid="ad" subtitleid="ae" hinttextid="af" promptid="ag" />
+	<View foo="L('ba')" bar="L('bb', 'bbh')" />
+	<View foo="Ti.Locale.getString('ca')" bar="Ti.Locale.getString('cb', 'cbh')" />
+	<View foo="Titanium.Locale.getString('da')" bar="Titanium.Locale.getString('db', 'dbh')" />
+</Alloy>

@@ -30,18 +30,27 @@ ti i18n extract
 
 *ti-i18n* will be further developped to be a worthy hook, listen to the global flags like `--no-colors` and read any relevant defaults from the CLI config.
 
-### Extract some strings
-The default *ti-i18n* assumes english as language and doesn't write back any changes to the `strings.xml`. You can change language by passing it as the first argument after the `extract` command. Add the `-a` or `--apply` option to write back:
+### Extract strings
+By default *ti-i18n* scans the `i18n` directory and uses all of them. You can choose a specific language by passing it as the first argument after the `extract` command.
+
+Add the `-a` or `--apply` option to append the new strings.
 
 ```
 ti-i18n extract nl -a
+```
+
+#### What does it extract?
+As demonstrated by the files in the [test/source](https://github.com/FokkeZB/ti-i18n/tree/master/test/source) directory, *ti-i18n* should be able to extract any string. Just don't use composed strings like:
+
+```
+L('error_' + code);
 ```
 
 ## Usage
 Command | Availability | Option | Description
 ------- | ------------ | ------ | -----------
 `extract`|both||extract i18n strings from the source code (js and tss files)
-||`<language>`|Language to read and write `strings.xml` from
+||`<language>`|Single lanuage to extract for
 ||`-a`, `--apply`|Update `strings.xml`
 `hook`|stand-alone|hook ti-i18n into Titanium CLI as: `ti i18n`
 `unhook`|both|unhook ti-i18n from Titanium CLI
@@ -53,9 +62,17 @@ Option | Availability | Description
 `-h`, `--help`|both|output usage information
 `-v`, `--version`|stand-alone|output the version number (as a hook, this will output the Titanium CLI version)
 
+## Testing
+The [test](https://github.com/FokkeZB/ti-i18n/tree/master/test) folder contains a single unit-test you can use, e.g. with mocha:
+
+```
+sudo npm install -g mocha
+mocha test/test.js
+```
+
 ## Roadmap
 
-* Rewrite `extract` to search through `XML`, `TSS` (JSON) and `JS` (AST).
+* ~~Rewrite `extract` to search through `XML`, `TSS` (JSON) and `JS` (AST).~~
 * Option to remove second hint-argument from `L` and use it in `strings.xml`.
 * Add `validate` to validate `strings.xml` for UTF-8, CDATA, duplicates etc.
 * Add `clean` to comment out any strings not found in source.

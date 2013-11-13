@@ -8,7 +8,7 @@ var program = require('commander'),
 program
     .version(mod.package.version, '-v, --version')
     .description(mod.package.about.name)
-    .usage('COMMAND [OPTIONS]');
+    .usage('command [options]');
 
 // expose the module's commands to the program
 _.each(mod.commands, function(config, name) {
@@ -21,7 +21,7 @@ _.each(mod.commands, function(config, name) {
         if (config.args) {
 
             _.each(config.args, function(arg) {
-                usage += ' <' + arg.name + '>';
+                usage += arg.required ? ' <' + arg.name + '>' : ' [' + arg.name + ']';
             });
         }
 

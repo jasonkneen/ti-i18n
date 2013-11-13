@@ -19,7 +19,7 @@ exports.commands = {
         args: [
             {
                 name: 'language',
-                desc: 'language to read/write strings.xml for',
+                desc: 'single language to extract for',
                 default: 'en'
             }
         ],
@@ -144,5 +144,5 @@ exports.hooked = function(env, callback) {
 exports.extract = function(env) {
     env.project = getProject();
 
-    require('./lib/extract')(env);
+    require('./lib/extract').run(env);
 };
