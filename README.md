@@ -2,7 +2,9 @@
 
 Titanium i18n (*ti-i18n*) is both a [Titanium](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference) CLI 3.2+ hook and stand-alone CLI for managing your app's internationalization. For now, it does exactly what the soon to be deprecated `alloy extract-i18n` does. But this will soon be expanded with new options, for both [Alloy](http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Command-Line_Interface_Reference) and Classic projects.
 
-* NPM: [https://npmjs.org/package/ti-i18n](https://npmjs.org/package/ti-i18n)
+* Blogs on ti-i18n: [http://fokkezb.nl/tag/ti-i18n](http://fokkezb.nl/tag/ti-i18n)
+
+[![NPM](https://nodei.co/npm/ti-i18n.png?downloads=true&starts=true)](https://nodei.co/npm/ti-i18n/)
 
 ## Quick Start
 
