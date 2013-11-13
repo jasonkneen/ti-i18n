@@ -26,7 +26,21 @@ exports.commands = {
         flags: {
             apply: {
                 abbr: 'a',
-                desc: 'write back to the strings.xml file'
+                desc: 'write back to the strings.xml files'
+            }
+        }
+    },
+    sync: {
+        desc: 'sync strings between all languages',
+        action: function (env) {
+            exports.sync(getProject().path_i18n, {
+                apply: env.apply || false
+            });
+        },
+        flags: {
+            apply: {
+                abbr: 'a',
+                desc: 'write back to the strings.xml files'
             }
         }
     },
@@ -63,6 +77,7 @@ function getProject() {
     project.path_alloy = path.join(project.path, 'app');
     project.alloy = fs.existsSync(project.path_alloy);
     project.path_resources = path.join(project.path, 'Resources');
+    project.path_i18n = path.join(project.path, 'i18n');
     project.path_source = project.alloy ? project.path_alloy : project.path_resources;
 
     return project;
@@ -145,4 +160,8 @@ exports.extract = function(env) {
     env.project = getProject();
 
     require('./lib/extract').run(env);
+};
+
+exports.sync = function(path, options) {
+    require('./lib/sync').run(path, options || {});
 };

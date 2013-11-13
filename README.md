@@ -1,6 +1,6 @@
 # Titanium i18n
 
-Titanium i18n (*ti-i18n*) is both a [Titanium](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference) CLI 3.2+ hook and stand-alone CLI for managing your app's internationalization. For now, it does exactly what the soon to be deprecated `alloy extract-i18n` does. But this will soon be expanded with new options, for both [Alloy](http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Command-Line_Interface_Reference) and Classic projects.
+Titanium i18n (*ti-i18n*) is both a pluggable [Titanium](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference) CLI 3.2+ command and stand-alone CLI for managing your app's internationalization. It replaces the soon to be deprecated `alloy extract-i18n` and works on both [Alloy](http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Command-Line_Interface_Reference) and Classic projects.
 
 * Blogs on ti-i18n: [http://fokkezb.nl/tag/ti-i18n](http://fokkezb.nl/tag/ti-i18n)
 
@@ -26,26 +26,33 @@ Once, you've done this. The following (note the `-`) does exactly the same:
 
 ```
 ti-i18n extract
-
 ti i18n extract
 ```
 
 *ti-i18n* will be further developped to be a worthy hook, listen to the global flags like `--no-colors` and read any relevant defaults from the CLI config.
 
-### Extract strings
-By default *ti-i18n* scans the `i18n` directory and uses all of them. You can choose a specific language by passing it as the first argument after the `extract` command.
+### Extract
+As demonstrated by the test on the files in [test/source](https://github.com/FokkeZB/ti-i18n/tree/master/test/source), *ti-i18n* is able to extract any string id. Just don't use composed strings like `L('error_' + code);`.
 
-Add the `-a` or `--apply` option to append the new strings.
+By default *ti-i18n* scans the `i18n` directory for languages and reads and writes to all of them. You can choose a specific language by passing it as the first argument after the `extract` command.
+
+Use the `-a` or `--apply` flag to actually append the missing strings to the files. In both cases, *ti-i18n* will display a table with the exact changes (to be) made.
 
 ```
+ti-i18n extract
+ti-i18n extract -a
+ti-i18n extract nl
 ti-i18n extract nl -a
 ```
 
-#### What does it extract?
-As demonstrated by the files in the [test/source](https://github.com/FokkeZB/ti-i18n/tree/master/test/source) directory, *ti-i18n* should be able to extract any string. Just don't use composed strings like:
+### Sync
+The sync command makes sure all languages have the same strings. If a file doesn't have a string present in one of the other languages, it will be appended to it.
+
+Use the `-a` or `--apply` flag to actually append the missing strings to the files. In both cases, *ti-i18n* will display a table with the exact changes (to be) made.
 
 ```
-L('error_' + code);
+ti-i18n sync
+ti-i18n sync -a
 ```
 
 ## Usage
@@ -78,7 +85,7 @@ mocha test/test.js
 * Option to remove second hint-argument from `L` and use it in `strings.xml`.
 * Add `validate` to validate `strings.xml` for UTF-8, CDATA, duplicates etc.
 * Add `clean` to comment out any strings not found in source.
-* Add `peer` to make sure all language have same strings.
+* ~~Add `peer` to make sure all language have same strings.~~
 * Add `name` to create/update XML for internationalized app names.
 
 ## Thanks to

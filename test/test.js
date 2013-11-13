@@ -6,6 +6,7 @@ var extract = require('./../lib/extract');
 
 describe('ti-i18n extract >', function() {
 
+	/*
 	describe('readLanguages(target)', function() {
 		var expected = 'en,nl',
 			actual;
@@ -37,6 +38,7 @@ describe('ti-i18n extract >', function() {
 		});
 
 	});
+	*/
 
 	describe('extractFromController(source/controller.js)', function() {
 		var expected = [
