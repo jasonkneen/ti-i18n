@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 var program = require('commander'),
-    colors = require('colors'),
     _ = require('underscore'),
-    mod = require('./module');
+    config = require('./config'),
+    main = require('./main');
 
 program
-    .version(mod.package.version, '-v, --version')
-    .description(mod.package.about.name)
+    .version(config.package.version, '-v, --version')
+    .description(config.package.about.name)
     .usage('command [options]');
 
 // expose the module's commands to the program
-_.each(mod.commands, function(config, name) {
+_.each(config.commands, function(config, name) {
 
     // for the CLI
     if (config.cli !== false) {
@@ -21,7 +21,7 @@ _.each(mod.commands, function(config, name) {
         if (config.args) {
 
             _.each(config.args, function(arg) {
-                usage += arg.required ? ' <' + arg.name + '>' : ' [' + arg.name + ']';
+                usage += (arg.required === true || (arg.required !== false && _.has(arg, 'default') === false)) ? ' <' + arg.name + '>' : ' [' + arg.name + ']';
             });
         }
 
@@ -42,7 +42,7 @@ _.each(mod.commands, function(config, name) {
 
                 // or assume it's an exported method for the module
                 else {
-                    mod[name](argv);
+                    main[name](argv);
                 }
             });
 
@@ -80,13 +80,13 @@ _.each(mod.commands, function(config, name) {
 
 // display banner for help
 if (_.intersection(process.argv, ['-h', '--help']).length > 0) {
-    mod.banner(false);
+    config.banner(false);
 }
 
 program.parse(process.argv);
 
 // show help when we don't have a valid arg
 if (program.args.length === 0 || typeof program.args[program.args.length - 1] === 'string') {
-    mod.banner(false);
+    config.banner(false);
     program.help();
 }

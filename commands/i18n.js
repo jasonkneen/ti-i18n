@@ -1,18 +1,19 @@
-var mod = require('../module'),
+var config = require('../config'),
+	main = require('../main'),
 	_ = require('underscore');
 
 var subcommands = {};
 
 // get the module's commands without the non-hook ones
-_.each(mod.commands, function (conf, cmd) {
-	if (conf.hook !== false) {
+_.each(config.commands, function (conf, cmd) {
+	if (conf.ti !== false) {
 		subcommands[cmd] = conf;
 	}
 });
 
 exports.cliVersion = '>=3.2';
-exports.title = mod.package.about.name;
-exports.desc = mod.package.description;
+exports.title = config.package.about.name;
+exports.desc = config.package.description;
 
 exports.config = function(logger, config, cli) {
 	return {
@@ -35,7 +36,7 @@ exports.run = function(logger, config, cli, finished) {
 
 		// just assume command is an export of the module
 		else {
-			mod[subcommand].call(this, cli.argv);
+			main[subcommand].call(this, cli.argv);
 		}
 	}
 

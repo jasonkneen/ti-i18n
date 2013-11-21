@@ -49,8 +49,8 @@
     "ascii-table": ">=0.0.1"
   },
   "license": "Apache Public License v2",
-  "bin": "./cli.js",
-  "main": "./module.js",
+  "bin": "./bin.js",
+  "main": "./main.js",
   "directories": {
     "lib": "./lib"
   },
