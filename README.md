@@ -1,12 +1,10 @@
-# Titanium i18n
+# Titanium i18n [![Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](http://www.appcelerator.com/titanium/)
 
 Titanium i18n (*ti-i18n*) is both a pluggable [Titanium](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference) CLI 3.2+ command and stand-alone CLI for managing your app's internationalization. It replaces the soon to be deprecated `alloy extract-i18n` and works on both [Alloy](http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Command-Line_Interface_Reference) and Classic projects.
 
 * Blogs on ti-i18n: [http://fokkezb.nl/tag/ti-i18n](http://fokkezb.nl/tag/ti-i18n)
 
-[![NPM](https://nodei.co/npm/ti-i18n.png?downloads=true&starts=true)](https://nodei.co/npm/ti-i18n/)
-
-## 1. Get it
+## 1. Get it [![npm](http://img.shields.io/npm/v/ti-i18n.png)](https://www.npmjs.org/package/ti-i18n)
 *ti-i18n* is built on [Node.js](http://nodejs.org/). Once you have Node.js installed you can use the included NPM package manager to install [ti-i18n](https://npmjs.org/package/ti-i18n) via the following command:
 
 ```
