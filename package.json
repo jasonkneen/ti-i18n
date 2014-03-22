@@ -46,7 +46,8 @@
     "xmldom": "0.1.13",
     "alloy": ">=1.2.2",
     "uglify-js": "~2.4.0",
-    "ascii-table": ">=0.0.1"
+    "ascii-table": ">=0.0.1",
+    "fs-extended": "~0.2.0"
   },
   "license": "Apache Public License v2",
   "bin": "./bin.js",
