@@ -21,7 +21,7 @@ exports.plug = function() {
     exports.plugged(null, function(plugged) {
 
         if (!plugged) {
-            execute('ti', ['config', '-a', 'paths.commands', __dirname, 'commands']);
+            execute('ti', ['config', '-a', 'paths.commands', path.join(__dirname, 'commands')]);
         }
 
         console.log('You can now use: ' + 'ti i18n'.green);
@@ -35,7 +35,7 @@ exports.unplug = function() {
     exports.plugged(null, function(plugged) {
 
         if (plugged) {
-            execute('ti', ['config', '-r', 'paths.commands', __dirname, 'commands']);
+            execute('ti', ['config', '-r', 'paths.commands', path.join(__dirname, 'commands')]);
         }
 
         console.log('You can now only use: ' + 'ti-i18n'.green);
