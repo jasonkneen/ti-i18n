@@ -59,3 +59,5 @@ obj.setPromptid('eg');
 obj.setTitleid({});
 obj.setTitleid(obj);
 obj.setTitleid(fn());
+
+obj.issue14 = L('issue\n14');

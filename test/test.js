@@ -46,7 +46,8 @@ describe('ti-i18n extract >', function() {
 			'ba', 'bb', 'bc', 'bd', 'be', 'bf',
 			'ca', 'cb', 'cc', 'cd', 'ce', 'cf', 'cg',
 			'da', 'db', 'dc',
-			'ea', 'eb', 'ec', 'ed', 'ee', 'ef', 'eg'
+			'ea', 'eb', 'ec', 'ed', 'ee', 'ef', 'eg',
+			'issue\\n14'
 		],
 			actual;
 
