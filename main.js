@@ -78,3 +78,8 @@ exports.sync = function(options) {
 exports.merge = function(options) {
     require('./lib/merge').run(options);
 }
+
+// Sort strings by key
+exports.sort = function(options) {
+    require('./lib/sort').run(options);
+}

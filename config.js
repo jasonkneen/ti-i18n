@@ -40,6 +40,16 @@ exports.commands = {
             }
         }
     },
+    sort: {
+        desc: 'sort strings by key',
+        options: {
+            'project-dir': {
+                abbr: 'd',
+                desc: 'Project directory (default: current)',
+                hint: 'path'
+            }
+        }
+    },
     merge: {
         desc: 'merge (translated) strings file with given or default language',
         options: {
