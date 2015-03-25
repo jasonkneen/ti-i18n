@@ -81,6 +81,16 @@ Example: ti-i18n merge -s ~/translated.xml -l nl -a
     -l, --language <ln>       language to compare with and merge to
 ```
 
+### Sort
+You can sort the strings in all language files of a project using the `sort` command.
+
+```
+Usage: sort [options]
+Example: ti-i18n sort
+Options:
+    -d, --project-dir <path>  Project directory (default: current)
+```
+
 ## Global options
 Option | Availability | Description
 ------- | ----------- | -----------
