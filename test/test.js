@@ -55,7 +55,7 @@ describe('ti-i18n extract >', function() {
 			assert.doesNotThrow(function() {
 				actual = extract.extractFromController(path.join(__dirname, 'source', 'controller.js'));
 			});
-		})
+		});
 
 		it('should not miss expected strings', function() {
 			var missing = _.difference(expected, actual);
@@ -79,7 +79,7 @@ describe('ti-i18n extract >', function() {
 			assert.doesNotThrow(function() {
 				actual = extract.extractFromStyle(path.join(__dirname, 'source', 'style.tss'));
 			});
-		})
+		});
 
 		it('should not miss expected strings', function() {
 			var missing = _.difference(expected, actual);
@@ -105,7 +105,7 @@ describe('ti-i18n extract >', function() {
 			assert.doesNotThrow(function() {
 				actual = extract.extractFromView(path.join(__dirname, 'source', 'view.xml'));
 			});
-		})
+		});
 
 		it('should not miss expected strings', function() {
 			var missing = _.difference(expected, actual);
