@@ -19,7 +19,7 @@
     "i18n",
     "internationalization"
   ],
-  "version": "0.5.7",
+  "version": "0.5.8",
   "author": {
     "name": "Fokke Zandbergen",
     "email": "mail@fokkezb.nl"
@@ -39,7 +39,7 @@
     "acorn": "^6.0.4",
     "acorn-jsx": "^5.0.1",
     "acorn-walk": "^6.1.1",
-    "alloy": "^1.13.4",
+    "alloy": "^1.14.5",
     "ascii-table": ">=0.0.1",
     "colors": ">=0.6.0-1",
     "commander": ">=1.0.x",
