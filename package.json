@@ -36,7 +36,7 @@
   },
   "preferGlobal": true,
   "dependencies": {
-    "acorn": "^8.8.1",
+    "acorn": "^6.4.1",
     "acorn-jsx": "^5.3.2",
     "acorn-walk": "^8.2.0",
     "alloy": "^1.14.5",
