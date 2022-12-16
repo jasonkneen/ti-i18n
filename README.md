@@ -1,4 +1,4 @@
-# Titanium i18n [![Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](http://www.appcelerator.com/titanium/)
+# Titanium i18n
 
 Titanium i18n (*ti-i18n*) is both a pluggable [Titanium](http://docs.appcelerator.com/titanium/latest/#!/guide/Titanium_Command-Line_Interface_Reference) CLI 3.2+ command and stand-alone CLI for managing your app's internationalization. It replaces the soon to be deprecated `alloy extract-i18n` and works on both [Alloy](http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Command-Line_Interface_Reference) and Classic projects.
 
@@ -31,7 +31,8 @@ ti i18n extract
 You can also use *ti-18n* as an dependency of your NodeJS project. The same options apply, just use the full names and make sure options like `--project-dir` are camel-cased to `projectDir`.
 
 ```javascript
-var i18n = require('ti-i18n');
+import i18n from 'ti-i18n';
+
 i18n.extract({
 	language: 'nl',
 	apply: true
@@ -118,7 +119,7 @@ mocha test/test.js
 ## License
 
 <pre>
-Copyright 2013 Fokke Zandbergen
+Copyright 2013-present Fokke Zandbergen
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
