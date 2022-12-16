@@ -8,7 +8,7 @@ Titanium i18n (*ti-i18n*) is both a pluggable [Titanium](http://docs.appcelerato
 *ti-i18n* is built on [Node.js](http://nodejs.org/). Once you have Node.js installed you can use the included NPM package manager to install [ti-i18n](https://npmjs.org/package/ti-i18n) via the following command:
 
 ```
-sudo npm install -g ti-i18n
+sudo npm install -g jasonkneen/ti-i18n
 ```
 
 ### Optionally plug as Titanium CLI 3.2.0 command
