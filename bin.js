@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
-var program = require('commander'),
-    _ = require('underscore'),
-    config = require('./config'),
-    main = require('./main');
+const commander = require('commander');
+const _ = require('underscore');
+const config = require('./config');
+const main = require('./main');
+
+const program = new commander.Command()
 
 program
     .version(config.package.version, '-v, --version')
@@ -15,7 +17,7 @@ _.each(config.commands, function(config, name) {
 
     // for the CLI
     if (config.cli !== false) {
-        var usage = name;
+        let usage = name;
 
         // args
         if (config.args) {
@@ -26,12 +28,12 @@ _.each(config.commands, function(config, name) {
         }
 
         // command
-        var command = program.command(usage)
+        const command = program.command(usage)
             .description(config.desc.grey)
             .action(function() {
 
                 // format like we get it when being an hook
-                var args = _.flatten(arguments),
+                const args = _.flatten(arguments),
                     argv = args.pop();
                 argv._ = args;
 
@@ -49,7 +51,7 @@ _.each(config.commands, function(config, name) {
         // flags
         if (config.flags) {
             _.each(config.flags, function(cf, flag) {
-                var inst = [];
+                let inst = [];
 
                 if (cf.abbr) {
                     inst.push('-' + cf.abbr);
@@ -64,7 +66,7 @@ _.each(config.commands, function(config, name) {
         // options
         if (config.options) {
             _.each(config.options, function(cf, option) {
-                var inst = [];
+                let inst = [];
 
                 if (cf.abbr) {
                     inst.push('-' + cf.abbr);
