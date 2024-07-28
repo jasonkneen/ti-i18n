@@ -1,10 +1,8 @@
-var fs = require("fs"),
-    path = require("path"),
-    fields = require('fields'),
-    _ = require('underscore'),
-    exec = require('exec'),
-    config = require('./config'),
-    logger = require("./lib/logger");
+const path = require('path');
+const _ = require('underscore');
+const exec = require('exec');
+const config = require('./config');
+const logger = require("./lib/logger");
 
 // Execute a shell command
 function execute(executable, params, callback) {
@@ -51,8 +49,8 @@ exports.plugged = function(env, callback) {
             logger.error(err);
 
         } else {
-            var object = JSON.parse(out),
-                plugged = _.contains(object.paths.commands, path.join(__dirname, 'commands'));
+            const object = JSON.parse(out);
+            const plugged = _.contains(object.paths.commands, path.join(__dirname, 'commands'));
 
             if (_.isFunction(callback)) {
                 callback(plugged);
