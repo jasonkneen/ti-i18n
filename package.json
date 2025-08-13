@@ -1,6 +1,6 @@
 {
   "name": "ti-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI to manage internationalizing your Titanium app",
   "license": "Apache-2.0",
   "engines": {
